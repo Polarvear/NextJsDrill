@@ -35,3 +35,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 #https://www.youtube.com/watch?v=pdWQvfQBSGg&list=PLpJDjPqxGWGoqwd8JkvC_V0zPjJRmbRsI&index=3
+#https://jsonplaceholder.typicode.com/posts?_start=0&_end=10 <= 데이터 받아오는 곳
+#local API 설치 SSR 과 SSG 차이점을 node 에서 알아보기 위해 설치
