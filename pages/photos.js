@@ -1,16 +1,21 @@
 import HeadInfo from "../components/HeadeInfo"
-// import Image from "next/image" //이미지 컴포넌트 대신에 이미지 태그 사용해서 해결 완료
+import Image from "next/image" //이미지 컴포넌트 대신에 이미지 태그 사용해서 해결 완료
+import '../styles/globals.css'
 /**
  * @see (https://nomadcoders.co/community/thread/5537)
  */
-import photos from "../styles/Photos.moduel.css"
+
 
 const photos = ({ photos }) => { // 라우팅이 굉장히 쉽다.
+    
+
+
+    
     return (
         <div>
             <HeadInfo title="My Blog Photos"/>
             <h1>My photos</h1>
-            <ul className={photosStyles.photos}>
+            <ul className={photos}>
                 {photos.map(photo=>(
                     <li key={photo.id}>
                     <img
