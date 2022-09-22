@@ -27,6 +27,8 @@ const photos = ({ photos }) => { // 라우팅이 굉장히 쉽다.
                     width={100}
                     height={100}
                     alt={photo.title}/>
+
+                    <span>{photo.title}</span>
                     </li>
                 ))}
                 
