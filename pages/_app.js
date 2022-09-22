@@ -1,5 +1,7 @@
 import '../styles/globals.css'
+// import photosStyles from "../styles/Photos.moduel.css"
 import Layout from '../components/Layout'
+
 
 
 

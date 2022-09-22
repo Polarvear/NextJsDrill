@@ -1,6 +1,9 @@
 import HeadInfo from "../components/HeadeInfo"
 import Image from "next/image" //이미지 컴포넌트 대신에 이미지 태그 사용해서 해결 완료
-import '../styles/globals.css'
+// import navStyles from '../styles/Nav.module.css'
+import photosStyle from '../styles/Photos.module.css' // 이거 쌍따옴표 안하고 작은 따옴표하니까 해결됨
+
+
 /**
  * @see (https://nomadcoders.co/community/thread/5537)
  */
@@ -15,7 +18,8 @@ const photos = ({ photos }) => { // 라우팅이 굉장히 쉽다.
         <div>
             <HeadInfo title="My Blog Photos"/>
             <h1>My photos</h1>
-            <ul className={photos}>
+            <ul className={photosStyle.photos}>
+
                 {photos.map(photo=>(
                     <li key={photo.id}>
                     <img
