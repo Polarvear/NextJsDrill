@@ -34,7 +34,7 @@ export const getStaticProps = async() => {
 }
 
 export const getStaticPaths = async() => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_start=0&_end=10`)
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_start=0&_end=5`)
     const photos = await res.json();
     photos.map(photo=> photo.id);
     const paths = ids.map(id => {
