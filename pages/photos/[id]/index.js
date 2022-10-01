@@ -23,8 +23,9 @@ const index = ({photo}) => {
         </div>
     )
 }
-export const getStaticProps = async() => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/photos/2`)
+export const getStaticProps = async(context) => { // 동적으로 받아야하기 때문에 context 파라미터 넘겨줌
+    const {id} = context.params;
+    const res = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
     const photo = await res.json();
     return {
         props: {
@@ -36,7 +37,7 @@ export const getStaticProps = async() => {
 export const getStaticPaths = async() => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_start=0&_end=5`)
     const photos = await res.json();
-    photos.map(photo=> photo.id);
+    const ids = photos.map(photo => photo.id);
     const paths = ids.map(id => {
         return {
             param: {id: id.toString() }
